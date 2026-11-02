@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jerusha Beauty Parlour – Frontend
 
-## Getting Started
+A responsive appointment booking website for **Jerusha Beauty Parlour**, built with Next.js, React, TypeScript, and Tailwind CSS. Customers can explore beauty services, check appointment availability, and book appointments. Administrators can log in to manage appointments, services, and customer records.
 
-First, run the development server:
+## Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+**Frontend:** https://python-frontend-beauty-parlour.netlify.app/
+
+**Backend API:** https://python-backend-beauty-parlour.onrender.com/
+
+## Technologies Used
+
+- **Next.js 16** – React framework
+- **React 19** – User interface
+- **TypeScript** – Type safety
+- **Tailwind CSS 4** – Styling
+- **Axios** – HTTP requests
+- **Netlify** – Frontend deployment
+
+## Features
+
+### Customer Features
+
+- Responsive home page.
+- View the latest active services.
+- Browse all available beauty services.
+- Book appointments by selecting a service, date, and available time slot.
+- View available appointment slots dynamically.
+- Customer information is saved and associated with bookings.
+- Form validation for appointment booking.
+
+### Admin Features
+
+- Admin login and logout.
+- Protected admin dashboard.
+- View appointment statistics.
+- View, search, and filter appointments.
+- Update appointment statuses and cancel appointments.
+- Create, edit, activate, and deactivate services.
+- View and search customer records.
+
+### Authentication and Security
+
+- JWT-based admin authentication using HttpOnly cookies.
+- CSRF protection for state-changing requests.
+- Axios configured to send credentials with API requests.
+- Protected admin pages and API requests.
+
+## Project Structure
+
+```text
+frontend/
+├── app/
+│   ├── admin/
+│   │   ├── login/
+│   │   ├── dashboard/
+│   │   ├── services/
+│   │   └── customers/
+│   ├── booking/
+│   ├── services/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── Header.tsx
+│   └── Footer.tsx
+├── lib/
+│   ├── api.ts
+│   ├── axios.ts
+│   └── admin.ts
+├── types/
+│   └── service.ts
+├── public/
+├── .env.local
+├── next.config.ts
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The frontend is deployed using **Netlify**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To deploy your own version:
 
-## Learn More
+1. Push the frontend project to GitHub.
+2. Import the repository into Netlify.
+3. Configure the `NEXT_PUBLIC_API_URL` environment variable with your backend URL.
+4. Deploy the application.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Developed as a full-stack web development portfolio project.
